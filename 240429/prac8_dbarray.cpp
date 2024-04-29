@@ -13,11 +13,11 @@ int main() {
 	cin >> row >> column;
 
 	// 2차원 동적 배열 선언 
-	int** arr = new int* [row];
+	int** matrix = new int* [row];
 
 	for (int i = 0; i < row; i++) {
 
-		arr[i] = new int[column];
+		matrix[i] = new int[column];
 
 	}
 	
@@ -29,7 +29,7 @@ int main() {
 
 		for (int j = 0; j < column; j++) {
 			cin >> input;
-			arr[i][j] = input;
+			matrix[i][j] = input;
 		}
 	}
 
@@ -46,7 +46,7 @@ int main() {
 
 		for (int j = 0; j < column; j++) {
 			
-			sum_row[i] += arr[i][j];
+			sum_row[i] += matrix[i][j];
 		}
 		cout << "행 " << i + 1 << ": " << sum_row[i] << endl;
 	}
@@ -59,9 +59,17 @@ int main() {
 		sum_column[j] = 0;
 		for (int i = 0; i < row; i++) {
 			
-			sum_column[j] += arr[i][j];
+			sum_column[j] += matrix[i][j];
 		}
 		cout << "열 " << j + 1 << ": " << sum_column[j] << endl;
 	}
-	
+	// 
+	for (int i = 0; i < row; i++) {
+		delete[] matrix[i];
+	}
+	delete[] matrix;
+
+	delete[] sum_row;
+	delete[] sum_column;
+
 }
