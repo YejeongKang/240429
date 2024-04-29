@@ -9,39 +9,12 @@ using namespace std;
 int main() {
 	time_t start, end;
 
-	double result;
-
-	// 1) time
-
-	start = time(NULL); // 현재 시간 반환
+	double result1, result2;
 
 	vector<int> test_vec1(1);
-
-	test_vec1.reserve(REPEAT);
-	
-	for (int i = 0; i < REPEAT; i++) {
-
-		test_vec1.push_back(i + 1);
-
-	}
-
-	end = time(NULL);
-
-	result = (double)(end - start);
-
-	cout << "수행 시간 : " << result << " second" << endl;
-
-	return 0;
-
-	// 2) clock
 
 	start = clock(); 	//현재 시간 반환
-	
 
-	vector<int> test_vec1(1);
-
-	test_vec1.reserve(REPEAT);
-	 
 	for (int i = 0; i < REPEAT; i++) {
 
 		 test_vec1.push_back(i + 1);
@@ -50,15 +23,29 @@ int main() {
 
 	end = clock();
 
-	result = (double)(end - start);
+	result1 = (double)(end - start);
+	
+	cout << "test_vec1의 수행 시간 : " << result1 << " millisecond" << endl;
 
-	/*second로 측정
-	cout << "수행 시간 : " << ((result) / clocks_per_sec) << " second" << endl;
-	*/
-	
-	// millisecond로 측정
-	
-	cout << "수행 시간 : " << result << " millisecond" << endl;
+	////////////////////////////////////////////////////////////////
+
+	vector<int> test_vec2(1);
+
+	test_vec2.reserve(REPEAT);
+
+	start = clock(); 	//현재 시간 반환
+
+	for (int i = 0; i < REPEAT; i++) {
+
+		test_vec1.push_back(i + 1);
+
+	}
+
+	end = clock();
+
+	result2 = (double)(end - start);
+
+	cout << "test_vec2의 수행 시간 : " << result2 << " millisecond" << endl;
 
 	return 0;
 }
