@@ -33,7 +33,7 @@ int main() {
 		}
 	}
 
-	// 각 행과 열의 합을 저장할 1차원 배열 선언
+	// *** 각 행과 열의 합을 저장할 1차원 배열 선언 ***
 	int *sum_row = new int[row];
 	int *sum_column = new int[column];
 
@@ -63,7 +63,7 @@ int main() {
 		}
 		cout << "열 " << j + 1 << ": " << sum_column[j] << endl;
 	}
-	// 
+	// 배열 해제 !!!
 	for (int i = 0; i < row; i++) {
 		delete[] matrix[i];
 	}
