@@ -13,19 +13,19 @@ int main() {
 
 	// 1) time
 
-	start = time(null); // 현재 시간 반환
+	start = time(NULL); // 현재 시간 반환
 
 	vector<int> test_vec1(1);
 
-	test_vec1.reserve(repeat);
+	test_vec1.reserve(REPEAT);
 	
-	for (int i = 0; i < repeat; i++) {
+	for (int i = 0; i < REPEAT; i++) {
 
 		test_vec1.push_back(i + 1);
 
 	}
 
-	end = time(null);
+	end = time(NULL);
 
 	result = (double)(end - start);
 
