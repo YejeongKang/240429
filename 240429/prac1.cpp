@@ -17,49 +17,39 @@ int main() {
 	// 3. 
 	myList.sort();
 
-	for (list<int>::iterator it = myList.begin(); it != myList.end(); it++) {
-		
-		cout << *it << " ";
+	for (int value : myList) cout << value << " ";
 
-	}
+	cout << endl;
 
 	// 4.
 	myList.unique();
 	
-	for (list<int>::iterator it = myList.begin(); it != myList.end(); it++) {
+	for (int value : myList) cout << value << " ";
 
-		cout << *it << " ";
-
-	}
+	cout << endl;
 
 	// 5.
 	list<int> newList = { 6, 7 };
 	
 	myList.merge(newList);
 
-	for (list<int>::iterator it = myList.begin(); it != myList.end(); it++) {
+	for (int value : myList) cout << value << " ";
 
-		cout << *it << " ";
-
-	}
+	cout << endl;
 
 	// 6.
 	myList.push_front(0);
 
-	for (list<int>::iterator it = myList.begin(); it != myList.end(); it++) {
+	for (int value : myList) cout << value << " ";
 
-		cout << *it << " ";
-
-	}
+	cout << endl;
 
 }
 
 int isFour(list<int> list) {
 	int cnt = 0;
-	for (int value : list) {
-		if (value == 4) {
-			cnt++;
-		}
-	}
+	
+	for (int value : list) if (value == 4) cnt++;
+	
 	return cnt;
 }
