@@ -27,18 +27,18 @@ int main() {
 
 	// 2) clock
 
-	//start = clock(); 	//현재 시간 반환
-	//
-	//for (int i = 0; i < 1000000000; i++)
-	//{
-	//	int ad = 421321;
-	//}
+	start = clock(); 	//현재 시간 반환
+	
+	for (int i = 0; i < 1000000000; i++)
+	{
+		int ad = 421321;
+	}
 
-	//end = clock();
+	end = clock();
 
-	//result = (double)(end - start);
+	result = (double)(end - start);
 
-	//cout << "수행 시간 : " << ((result) / CLOCKS_PER_SEC) << " second" << endl;
+	cout << "수행 시간 : " << ((result) / CLOCKS_PER_SEC) << " second" << endl;
 
-	//return 0;
+	return 0;
 }
