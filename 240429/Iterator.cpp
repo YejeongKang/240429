@@ -11,6 +11,7 @@
 //int* p = v; // X
 // int* p = v.begin();
 
+// 벡터 중복 삭제
 
 #include <iostream>
 #include <vector>
@@ -23,37 +24,39 @@ int main() {
 
 	vector<int> myVector = { 10, 20, 30, 20, 40, 10, 50 };
 
-	cout << " [vector] " << endl;
+	cout << "[vector] " << endl;
 
 	// 벡터 값 출력
-	cout << "{";
+	cout << endl << "{";
 	for (int vec : myVector) {
 		cout << vec;
-		if (vec != *(myVector.begin() + myVector.size())) {
+		if (vec != myVector.back()) {
 			cout << ", ";
 		}
 		else {
 			break;
 		}
 	}
-	cout << "};";
+	cout << "};" << endl;
 
-	unique(myVector.begin(), myVector.end());
+	sort(myVector.begin(), myVector.end());
 
-	cout << " [vector 중복삭제] " << endl << "결과 : " << endl;
+	myVector.erase(unique(myVector.begin(), myVector.end()), myVector.end());
+
+	cout << endl << "[vector 중복삭제] " << endl;
 
 	// 벡터 값 출력
-	cout << "{";
+	cout << endl << "{";
 	for (int vec : myVector) {
 		cout << vec;
-		if (vec != *(myVector.end())) {
+		if (vec != myVector.back()) {
 			cout << ", ";
 		}
 		else {
 			break;
 		}
 	}
-	cout << "};";
+	cout << "};" << endl;
 
 }
 

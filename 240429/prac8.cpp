@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
-#include <algorithm>
 #include <string>
+#include <algorithm> // sort¿Í unique »ç¿ë
 
 using namespace std;
 
