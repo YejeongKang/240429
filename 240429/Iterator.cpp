@@ -27,7 +27,7 @@ int main() {
 	cout << "[vector] " << endl;
 
 	// 벡터 값 출력
-	cout << endl << "{";
+	/*cout << endl << "{";
 	for (int vec : myVector) {
 		cout << vec;
 		if (vec != myVector.back()) {
@@ -37,7 +37,16 @@ int main() {
 			break;
 		}
 	}
-	cout << "};" << endl;
+
+	cout << "};" << endl;*/
+
+	cout << "{";
+	auto last = myVector.end();
+	--last; // Point to the last element
+	for (auto it = myVector.begin(); it != last; ++it) {
+		cout << *it << ", ";
+	}
+	cout << *last << "};" << endl;
 
 	sort(myVector.begin(), myVector.end());
 
@@ -46,6 +55,18 @@ int main() {
 	cout << endl << "[vector 중복삭제] " << endl;
 
 	// 벡터 값 출력
+	/*cout << endl << "{";
+	for (int vec : myVector) {
+		cout << vec;
+		if (vec != myVector.back()) {
+			cout << ", ";
+		}
+		else {
+			break;
+		}
+	}
+	cout << "};" << endl;*/
+
 	cout << endl << "{";
 	for (int vec : myVector) {
 		cout << vec;
@@ -56,6 +77,7 @@ int main() {
 			break;
 		}
 	}
+
 	cout << "};" << endl;
 
 }
