@@ -14,7 +14,7 @@ int main() {
 	// 행과 열의 수 입력 받기
 	cin >> row >> column;
 
-	// 2차원 동적 배열 생성
+	// 2차원 동적 배열 선언 
 	int** arr = new int* [row];
 
 	for (int i = 0; i < row; i++) {
@@ -22,22 +22,24 @@ int main() {
 		arr[i] = new int[column];
 
 	}
-
-	cout << endl << "행렬 원소를 입력하세요 : " << endl;
 	
 	// 입력값을 배열에 추가
+	cout << endl << "행렬 원소를 입력하세요 : " << endl;
+
 	for (int i = 0; i < row; i++) {
 		cout << endl;
+
 		for (int j = 0; j < column; j++) {
 			cin >> input;
 			arr[i][j] = input;
 		}
 	}
 
-	// 각 행과 열의 합 구하기
+	// 각 행과 열의 합을 저장할 1차원 배열 선언
 	int *sum_row = new int[row];
 	int *sum_column = new int[column];
-	
+
+	// 각 행의 합 구하기
 	cout << endl << "각 행의 합 :" << endl;
 
 	for (int i = 0; i < row; i++) {
@@ -51,6 +53,7 @@ int main() {
 		cout << "행 " << i + 1 << ": " << sum_row[i] << endl;
 	}
 
+	// 각 열의 합 구하기
 	cout << endl << "각 열의 합 :" << endl;
 
 	for (int j = 0; j < column; j++) {
