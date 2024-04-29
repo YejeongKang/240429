@@ -47,21 +47,21 @@ int main() {
 
 	for (int i = 0; i < row; i++) {
 		cout << "각 행의 합 :" << endl;
-		sum_row[i] = 0;
-		for (int j = 0; j < column; j++) {
 
-			sum_row[i] += arr[i][j];
-		}
+		sum_row[i] = 0;
+
+		for (int j = 0; j < column; j++) sum_row[i] += arr[i][j]; 
+
 		cout << "행 " << i + 1 << ": " << sum_row[i] << endl;
 	}
 
 	for (int j = 0; j < column; j++) {
 		cout << "각 열의 합 :" << endl;
-		sum_column[j] = 0;
-		for (int i = 0; i < row; i++) {
 
-			sum_column[j] += arr[i][j];
-		}
+		sum_column[j] = 0;
+
+		for (int i = 0; i < row; i++) sum_column[j] += arr[i][j];
+
 		cout << "열 " << j + 1 << ": " << sum_column[j] << endl;
 	}
 
@@ -74,11 +74,7 @@ void vector_to_array(vector<int> vec, int** array, int m, int n) {
 
 		cout << endl;
 
-		for (int j = 0; j < n; j++) {
+		for (int j = 0; j < n; j++) array[i][j] = *(vec.begin() + i * n + j);
 
-			array[i][j] = *(vec.begin() + i * n + j);
-
-			//cout << array[i][j] << "\t";
-		}
 	}
 }

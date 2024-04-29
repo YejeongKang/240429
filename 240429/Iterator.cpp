@@ -27,7 +27,9 @@ int main() {
 	cout << "[vector] " << endl;
 
 	// º¤ÅÍ °ª Ãâ·Â
-	/*cout << endl << "{";
+	
+	//1
+	cout << endl << "{";
 	for (int vec : myVector) {
 		cout << vec;
 		if (vec != myVector.back()) {
@@ -38,8 +40,15 @@ int main() {
 		}
 	}
 
-	cout << "};" << endl;*/
+	cout << "};" << endl;
 
+	//2
+	for (int vec : myVector) {
+		if (vec != myVector.back()) cout << vec << ", ";
+		else cout << vec;
+	}
+
+	//3
 	cout << "{";
 	auto last = myVector.end();
 	--last; // Point to the last element
