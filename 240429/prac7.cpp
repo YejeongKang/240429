@@ -6,6 +6,8 @@ using namespace std;
 
 #define REPEAT 100000000
 
+void PushHM(vector<int> vec);
+
 int main() {
 	time_t start, end;
 
@@ -15,11 +17,7 @@ int main() {
 
 	start = clock(); 	//현재 시간 반환
 
-	for (int i = 0; i < REPEAT; i++) {
-
-		 test_vec1.push_back(i + 1);
-
-	}
+	PushHM(test_vec1);
 
 	end = clock();
 
@@ -35,11 +33,7 @@ int main() {
 
 	start = clock(); 	//현재 시간 반환
 
-	for (int i = 0; i < REPEAT; i++) {
-
-		test_vec1.push_back(i + 1);
-
-	}
+	PushHM(test_vec2);
 
 	end = clock();
 
@@ -49,3 +43,13 @@ int main() {
 
 	return 0;
 }
+
+void PushHM(vector<int> vec) {
+	
+	for (int i = 0; i < REPEAT; i++) {
+
+		vec.push_back(i + 1);
+
+	}
+}
+
