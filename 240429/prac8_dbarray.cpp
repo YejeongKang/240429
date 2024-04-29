@@ -4,8 +4,6 @@
 
 using namespace std;
 
-void vector_to_array(vector<int> vec, int** array, int m, int n);
-
 int main() {
 	int row = 0 , column = 0 , input;
 
