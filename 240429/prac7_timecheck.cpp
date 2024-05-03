@@ -40,6 +40,7 @@ int main() {
 	result2 = (double)(end - start);
 
 	cout << "test_vec2의 수행 시간 : " << result2 << " millisecond" << endl;
+	//cout << "수행 시간 : " << ((result) / CLOCKS_PER_SEC) << " second" << endl;
 
 	return 0;
 }

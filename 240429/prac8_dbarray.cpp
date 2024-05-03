@@ -63,6 +63,7 @@ int main() {
 		}
 		cout << "열 " << j + 1 << ": " << sum_column[j] << endl;
 	}
+
 	// 배열 해제 !!!
 	for (int i = 0; i < row; i++) {
 		delete[] matrix[i];

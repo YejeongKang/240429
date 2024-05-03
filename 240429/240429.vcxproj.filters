@@ -18,13 +18,13 @@
     <ClCompile Include="TimeCheck.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="prac7.cpp">
+    <ClCompile Include="prac7_timecheck.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Iterator.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="prac8.cpp">
+    <ClCompile Include="prac8_vector.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="prac8_dbarray.cpp">
@@ -33,7 +33,7 @@
     <ClCompile Include="prac8_going_dbarray.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="prac1.cpp">
+    <ClCompile Include="prac1_list.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -130,8 +130,8 @@
     <ClCompile Include="Iterator.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="prac1.cpp" />
-    <ClCompile Include="prac8.cpp">
+    <ClCompile Include="prac1_list.cpp" />
+    <ClCompile Include="prac8_vector.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="prac8_dbarray.cpp">
@@ -143,7 +143,7 @@
     <ClCompile Include="TimeCheck.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="prac7.cpp">
+    <ClCompile Include="prac7_timecheck.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
   </ItemGroup>
